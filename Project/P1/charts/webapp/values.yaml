@@ -1,0 +1,21 @@
+config:
+  docker_registry: tonybarr16
+  access_key: ${AWS_ACCESS_KEY_ID}
+  secret_key: ${AWS_SECRET_ACCESS_KEY}
+  bucket: 2024-02-ic4302-gr1
+  frontend:
+    replicas: 2
+    name: frontend
+    image: frontend
+  frontendnodeport:
+    port: 80
+    targetPort: 80
+    nodePort: 30080
+  backendapi:
+    replicas: 2
+    name: backend-api
+    image: backend-api-memcached
+  backendapinodeport:
+    port: 5000
+    targetPort: 5000
+    nodePort: 31000

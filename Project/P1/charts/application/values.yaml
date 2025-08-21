@@ -1,7 +1,7 @@
 config:
   docker_registry: tonybarr16
-  access_key: "Aws_access_key"
-  secret_key: "AWS_secret_key"
+  access_key: ${AWS_ACCESS_KEY_ID}
+  secret_key: ${AWS_SECRET_ACCESS_KEY}
   bucket: 2024-02-ic4302-gr1
   producer:
     replicas: 1
